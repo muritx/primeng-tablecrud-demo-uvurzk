@@ -6,7 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
 
 import { AppComponent }   from './app.component';
-import { ProductService } from './productservice';
+//import { ProductService } from './productservice';
+import { PersonService } from './personservice';
 
 import {TableModule} from 'primeng/table';
 import {ToastModule} from 'primeng/toast';
@@ -60,7 +61,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
   ],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ProductService, MessageService, ConfirmationService]
+  //providers:  [ProductService, MessageService, ConfirmationService]
+  providers:    [PersonService, MessageService, ConfirmationService]
 })
 
 export class AppModule { }
