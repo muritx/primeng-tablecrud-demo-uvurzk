@@ -100,29 +100,18 @@
         </th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-product>
+    <ng-template pTemplate="body" let-person>
       <tr>
         <td>
           <p-tableCheckbox [value]="person"></p-tableCheckbox>
         </td>
-        <td>{{ product.name }}</td>
-        <!-- <td>{{ product.price | currency: 'BRL' }}</td>
-        <td>{{ product.category }}</td> -->
-        <!-- <td>
-          <p-rating
-            [ngModel]="product.rating"
-            [readonly]="true"
-            [cancel]="false"
-          ></p-rating>
-        </td> -->
-        <!-- <td>
-          <span
-            [class]="
-              'product-badge status-' + product.inventoryStatus.toLowerCase()
-            "
-            >{{ product.inventoryStatus }}</span
-          >
-        </td> -->
+        <td>{{ person.name }}</td>
+        <td>{{ person.born }}</td>
+        <td>{{ person.gender }}</td>
+        <td>{{ person.height }}</td>
+        <td>{{ person.weight }}</td>
+        <td>{{ person.phone }}</td>
+        <td>{{ person.note }}</td>
         <td>
           <button
             pButton
