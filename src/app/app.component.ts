@@ -46,6 +46,10 @@ export class AppComponent {
 
     ngOnInit() {
         this.personService.getPeople().then(data => this.people = data);
+
+        this.personService.getPeople().then((data) => {
+            console.log(data);
+        });
     }
 
     // openNew() {

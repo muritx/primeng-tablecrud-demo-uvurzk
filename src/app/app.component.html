@@ -78,21 +78,26 @@
           <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
         </th>
         <th pSortableColumn="name">
-          Name <p-sortIcon field="name"></p-sortIcon>
+          Nome <p-sortIcon field="name"></p-sortIcon>
         </th>
-        <!-- <th pSortableColumn="price">
-          Price <p-sortIcon field="price"></p-sortIcon>
+        <th pSortableColumn="born">
+          Nascimento <p-sortIcon field="born"></p-sortIcon>
         </th>
-        <th pSortableColumn="category">
-          Category <p-sortIcon field="category"></p-sortIcon>
+        <th pSortableColumn="gender">
+          Sexo <p-sortIcon field="gender"></p-sortIcon>
         </th>
-        <th pSortableColumn="rating">
-          Reviews <p-sortIcon field="rating"></p-sortIcon>
+        <th pSortableColumn="height">
+          Altura <p-sortIcon field="height"></p-sortIcon>
         </th>
-        <th pSortableColumn="inventoryStatus">
-          Status <p-sortIcon field="inventoryStatus"></p-sortIcon>
-        </th> -->
-        <th></th>
+        <th pSortableColumn="weight">
+          Peso <p-sortIcon field="weight"></p-sortIcon>
+        </th>
+        <th pSortableColumn="phone">
+          Fone <p-sortIcon field="phone"></p-sortIcon>
+        </th>
+        <th pSortableColumn="note">
+          Nota <p-sortIcon field="note"></p-sortIcon>
+        </th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-product>
@@ -168,7 +173,6 @@
     </div>
 
     <div class="p-formgrid p-grid">
-
       <div class="p-field p-col">
         <label for="born">Nascimento</label>
         <input
@@ -181,7 +185,6 @@
         />
       </div>
 
-
       <div class="p-field p-col">
         <label for="gender">Gênero</label>
         <select [(ngModel)]="person.gender" required>
@@ -191,23 +194,16 @@
           <option value="Electronics">Outros</option>
         </select>
       </div>
-
     </div>
 
     <div class="p-formgrid p-grid">
       <div class="p-field p-col">
         <label for="height">Altura</label>
-        <p-inputNumber
-          id="height"
-          [(ngModel)]="person.height"
-        ></p-inputNumber>
+        <p-inputNumber id="height" [(ngModel)]="person.height"></p-inputNumber>
       </div>
       <div class="p-field p-col">
         <label for="height">Peso</label>
-        <p-inputNumber
-          id="weight"
-          [(ngModel)]="person.weight"
-        ></p-inputNumber>
+        <p-inputNumber id="weight" [(ngModel)]="person.weight"></p-inputNumber>
       </div>
     </div>
 
@@ -282,16 +278,23 @@
         [(ngModel)]="person.phone"
         required
         autofocus
-        pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(99) 99999-9999"
+        pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+        placeholder="(99) 99999-9999"
       />
     </div>
 
     <div class="field">
       <label for="note">Observação</label>
-      <textarea id="note" pInputTextarea [(ngModel)]="person.note" required rows="3" cols="20"></textarea>
-  </div>
-    
-  </ng-template> 
+      <textarea
+        id="note"
+        pInputTextarea
+        [(ngModel)]="person.note"
+        required
+        rows="3"
+        cols="20"
+      ></textarea>
+    </div>
+  </ng-template>
 
   <ng-template pTemplate="footer">
     <button
