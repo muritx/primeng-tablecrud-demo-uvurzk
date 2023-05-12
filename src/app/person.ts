@@ -1,7 +1,7 @@
 export interface Person {
   id?: string;
   name?: string;
-  born?: Date; //Formato de data dd/MM/YYYY
+  born?: any; //Formato de data dd/MM/YYYY
   gender?: string;
   height?: number;
   weight?: number;
