@@ -164,14 +164,7 @@
     <div class="p-formgrid p-grid">
       <div class="p-field p-col">
         <label for="born">Nascimento</label>
-        <input
-          type="date"
-          id="born"
-          pInputText
-          [(ngModel)]="person.born"
-          required
-          pattern="\d{1,2}/\d{1,2}/\d{4}"
-        />
+        <p-calendar [(ngModel)]="person.born"></p-calendar>
       </div>
 
       <div class="p-field p-col">
